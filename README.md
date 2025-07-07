@@ -17,7 +17,7 @@ Clone or fork this repository to use as a template for your own portfolio, or ex
 
 ## 📬 Contact
 - Email: raghavkumar2002sharma@gmail.com
-- LinkedIn: https://www.linkedin.com/in/raghav-kumar/
+- LinkedIn: https://www.linkedin.com/in/raghav-k-381a302b0/
 
 ---
 Thank you for visiting!

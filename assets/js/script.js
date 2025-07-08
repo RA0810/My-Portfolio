@@ -76,6 +76,25 @@ var typed = new Typed(".typing-text", {
     typeSpeed: 50,
     backSpeed: 25,
     backDelay: 500,
+    showCursor: true,
+    cursorChar: '|',
+    attr: null,
+    bindInputFocusEvents: true,
+    contentType: 'html',
+    onBegin: function(self) {
+      document.querySelector('.typing-text').style.display = 'inline-block';
+    },
+    onStringTyped: function(arrayPos, self) {
+      document.querySelector('.typing-text').style.display = 'inline-block';
+    },
+    onComplete: function(self) {
+      document.querySelector('.typing-text').style.display = 'inline-block';
+    }
+});
+// Ensure typewriter is always visible on Android/mobile
+document.addEventListener('DOMContentLoaded', function() {
+  var typing = document.querySelector('.typing-text');
+  if(typing) typing.style.display = 'inline-block';
 });
 // <!-- typed js effect ends -->
 

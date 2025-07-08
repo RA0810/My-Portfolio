@@ -271,13 +271,17 @@ header .navbar ul li a:hover {
   max-width: 90vw;
   margin: 0 auto;
   border-radius: 50%;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
   cursor: pointer;
-  background: #fff;
+  background: linear-gradient(135deg, #fff 60%, #e6eff1 100%);
   display: block;
+  object-fit: cover;
+  border: 4px solid #ffd900;
+  transition: box-shadow 0.3s, border 0.3s;
 }
 .home .image img:hover {
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 8px 32px rgba(255, 217, 0, 0.18), 0 8px 32px rgba(0,0,0,0.35);
+  border: 4px solid #2506ad;
 }
 /* Home heading improvements for mobile */
 .home .content h2 {
@@ -438,18 +442,20 @@ header .navbar ul li a:hover {
 }
 .about .row .image img {
   margin: 2rem auto;
-  width: 260px;
+  width: 220px;
   max-width: 90vw;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
-  mix-blend-mode: luminosity;
-  transition: 0.3s;
+  height: 220px;
+  border-radius: 50%;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+  object-fit: cover;
+  background: linear-gradient(135deg, #fff 60%, #e6eff1 100%);
+  border: 4px solid #ffd900;
+  transition: box-shadow 0.3s, border 0.3s;
   cursor: pointer;
-  background: #fff;
 }
 .about .row .image img:hover {
-  mix-blend-mode: normal;
+  box-shadow: 0 8px 32px rgba(255, 217, 0, 0.18), 0 8px 32px rgba(0,0,0,0.35);
+  border: 4px solid #2506ad;
 }
 .about .row .content {
   flex: 1 1 45rem;
@@ -987,44 +993,7 @@ color: #fff;
   }
 }
 /* --- Responsive Project Card Styles End --- */
-.work .viewall {
-  display: flex;
-  justify-content: center;
-  margin-top: 2rem;
-}
-.work .viewall .btn {
-  position: relative;
-  line-height: 0;
-  padding: 1.6rem 3rem;
-  border-radius: 0.5em;
-  transition: 0.5s;
-  color: #111;
-  font-weight: 700;
-  border: 2px solid #fff;
-  background: #fff;
-  box-shadow: 0px 5px 10px rgba(65, 84, 241, 0.4);
-  text-align: center;
-  font-size: 1.7rem;
-  margin: 0 auto;
-  display: inline-block;
-}
-.work .viewall .btn span {
-  font-weight: 600;
-  font-size: 1.7rem;
-  font-family: "Nunito", sans-serif;
-}
-.work .viewall .btn i {
-  margin-left: 0.3rem;
-  font-size: 1.5rem;
-  transition: 0.3s;
-}
-.work .viewall .btn:hover {
-  background: #222;
-  color: #fff;
-}
-.work .viewall .btn:hover i {
-  transform: translateX(5px);
-}
+/* .work .viewall and related styles removed as requested */
 /* work section ends */
 
 /* experience section starts */
@@ -1400,10 +1369,22 @@ form .button-area {
     max-width: 70vw;
     margin: 0 auto;
     display: block;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ffd900;
+    background: linear-gradient(135deg, #fff 60%, #e6eff1 100%);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
   }
   .home .content h2, .home .content h2 span {
     font-size: 2.2rem;
     word-break: break-word;
+  }
+  .home .intro-name {
+    font-size: 1.5rem !important;
+    color: #fff !important;
+    margin-top: 0.7rem !important;
+    display: block !important;
+    text-align: center !important;
   }
   .home .btn {
     margin: 2rem auto 0 auto;

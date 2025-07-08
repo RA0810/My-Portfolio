@@ -5,12 +5,15 @@ document.addEventListener("DOMContentLoaded", function() {
   // Only run if the Home heading exists
   var kumarSpan = document.querySelector('.home .content h2 span');
   if (kumarSpan) {
-    // Create a new span for the typewriter effect
+    // Always show 'Raghav' before the typewriter effect
+    var parent = kumarSpan.parentNode;
+    if (parent) {
+      parent.childNodes[1].textContent = ' Raghav ';
+    }
     var typeSpan = document.createElement('span');
     typeSpan.className = 'typing-kumar';
     kumarSpan.innerHTML = '';
     kumarSpan.appendChild(typeSpan);
-    // Start Typed.js on the new span
     new Typed('.typing-kumar', {
       strings: ["Kumar"],
       typeSpeed: 100,

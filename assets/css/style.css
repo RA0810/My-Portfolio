@@ -494,11 +494,8 @@ header .navbar ul li a:hover {
   color: #111;
 }
 .about .row {
-  display: flex;
-  flex-direction: row;
-  gap: 0;
-  flex-wrap: wrap;
-  padding: 0 4rem 2rem 4rem;
+  display: block;
+  padding: 0 0 1.5rem 0;
 }
 .about .row .image {
   text-align: center;

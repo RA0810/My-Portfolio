@@ -40,8 +40,9 @@
     }
   },
   {
+    "id": "proj-insta",
     "name": "Instagram MERN",
-    "desc": "Full-Stack Instagram clone built using MERN stack and realtime chat with the help of socket.iO",
+    "desc": "A visually rich, full-stack Instagram clone built using the MERN stack (MongoDB, Express, React, Node.js) with real-time chat powered by Socket.IO. Features include user authentication, post sharing, likes, comments, and a modern UI. Project ID: proj-insta.",
     "image": "instagrammern",
     "category": "mern",
     "links": {
@@ -50,8 +51,9 @@
     }
   },
   {
+    "id": "proj-flipkart",
     "name": "Flipkart MERN",
-    "desc": "Full-Stack Flipkart with Admin Dashboard and Paytm Payment Gateway. MERN Stack WebApp, ready to use for business.",
+    "desc": "A complete Flipkart e-commerce clone with Admin Dashboard, Paytm Payment Gateway, and business-ready features. Built using the MERN stack for robust performance and scalability. Project ID: proj-flipkart.",
     "image": "flipkartmern",
     "category": "mern",
     "links": {
@@ -60,8 +62,9 @@
     }
   },
   {
+    "id": "proj-resumegen",
     "name": "ResumeGen",
-    "desc": "ReactJS Basic Resume Generator which will generate customized resume in few minutes on your requirements.",
+    "desc": "A ReactJS-based Resume Generator that creates customized, professional resumes in minutes. User-friendly interface and instant PDF export. Project ID: proj-resumegen.",
     "image": "resumegen",
     "category": "mern",
     "links": {

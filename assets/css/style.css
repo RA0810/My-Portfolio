@@ -254,24 +254,28 @@ header .navbar ul li a:hover {
   z-index: 1;
 }
 .home .image img {
-  width: 320px;
+  width: 220px;
   max-width: 90vw;
   margin: 0 auto;
   border-radius: 50%;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   background: #fff;
+  display: block;
 }
 .home .image img:hover {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 }
+/* Home heading improvements for mobile */
 .home .content h2 {
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 800;
   color: #fff;
+  text-align: center;
+  word-break: break-word;
 }
 .home .content h2 span {
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 800;
   color: #b0b0b0;
   display: inline-block;
@@ -300,9 +304,10 @@ header .navbar ul li a:hover {
   padding: 1rem 0;
 }
 .home .btn {
-  margin-top: 1rem;
-  position: absolute;
-  line-height: 0;
+  margin: 2rem auto 0 auto;
+  display: block;
+  position: static;
+  line-height: 1.2;
   padding: 1.6rem 3rem;
   border-radius: 4em;
   transition: 0.5s;
@@ -310,6 +315,7 @@ header .navbar ul li a:hover {
   background: #2506ad;
   box-shadow: 0px 5px 18px rgba(48, 68, 247, 0.6);
   font-family: "Nunito", sans-serif;
+  text-align: center;
 }
 .home .btn span {
   font-weight: 700;
@@ -1377,9 +1383,22 @@ form .button-area {
     text-align: center;
   }
   .home .image img, .about .row .image img {
-    width: 180px;
-    max-width: 80vw;
+    width: 120px;
+    max-width: 70vw;
     margin: 0 auto;
+    display: block;
+  }
+  .home .content h2, .home .content h2 span {
+    font-size: 2.2rem;
+    word-break: break-word;
+  }
+  .home .btn {
+    margin: 2rem auto 0 auto;
+    display: block;
+    position: static;
+    width: fit-content;
+    font-size: 1.3rem;
+    padding: 1.2rem 2.2rem;
   }
   header {
     padding: 1.2rem 2.5%;
@@ -1394,18 +1413,25 @@ form .button-area {
     font-size: 52%;
   }
   .home .content h2, .home .content h2 span {
-    font-size: 2.2rem;
+    font-size: 1.5rem;
+    word-break: break-word;
   }
   .home .content p, .home .content p span {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
+  }
+  .home .btn {
+    font-size: 1.1rem;
+    padding: 1rem 1.5rem;
+    margin: 1.2rem auto 0 auto;
+    width: fit-content;
   }
   .about .row .image img {
-    width: 120px;
+    width: 80px;
     margin: 0 auto 1rem auto;
   }
   .contact .content .image-box img {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
   }
   .footer .box-container {
     flex-direction: column;

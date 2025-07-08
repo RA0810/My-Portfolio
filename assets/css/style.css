@@ -1327,8 +1327,10 @@ form .message textarea {
 }
 .field input::placeholder,
 .message textarea::placeholder {
-  color: #fff !important;
-  opacity: 0.8;
+  color: #ffd900 !important;
+  opacity: 1 !important;
+  font-weight: 700;
+  letter-spacing: 0.03em;
 }
 .field input:focus,
 .message textarea:focus {

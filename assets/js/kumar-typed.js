@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
     kumarSpan.appendChild(typeSpan);
     // Start Typed.js on the new span
     new Typed('.typing-kumar', {
-      strings: ["Kumar"],
+      strings: ["Raghav Kumar"],
       typeSpeed: 100,
       showCursor: false,
       loop: true,

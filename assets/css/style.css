@@ -186,12 +186,13 @@ header .navbar ul li a:hover {
 #menu {
   font-size: 3rem;
   cursor: pointer;
-  color: rgb(24, 2, 63);
+  color: #fff !important;
   display: none;
 }
 @media (max-width: 768px) {
   #menu {
     display: block;
+    color: #fff !important;
   }
   header .navbar {
     position: fixed;

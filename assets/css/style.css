@@ -495,7 +495,7 @@ header .navbar ul li a:hover {
 }
 .about .row {
   display: block;
-  padding: 0 0 1.5rem 0;
+  padding: 0;
 }
 .about .row .image {
   text-align: center;

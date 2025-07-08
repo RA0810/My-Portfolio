@@ -290,6 +290,7 @@ header .navbar ul li a:hover {
   border: 4px solid #2506ad;
 }
 /* Home heading improvements for mobile */
+
 .home .content h2 {
   font-size: 4rem;
   font-weight: 800;
@@ -302,7 +303,20 @@ header .navbar ul li a:hover {
   font-weight: 800;
   color: #b0b0b0;
   display: inline-block;
-/* removed extra closing bracket */
+}
+@media (max-width: 700px) {
+  .home .content h2 {
+    font-size: 2.2rem;
+    text-align: center;
+    word-break: break-word;
+    display: block;
+    width: 100%;
+  }
+  .home .content h2 span {
+    font-size: 2.2rem;
+    display: inline-block;
+    color: #b0b0b0;
+  }
 }
 
 @keyframes motion-text {

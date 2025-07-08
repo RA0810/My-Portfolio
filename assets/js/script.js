@@ -69,34 +69,19 @@ document.addEventListener('visibilitychange',
     });
 
 
-// <!-- typed js effect starts -->
-var typed = new Typed(".typing-text", {
-    strings: ["frontend development", "backend development", "web designing", "android development", "web development"],
-    loop: true,
-    typeSpeed: 50,
-    backSpeed: 25,
-    backDelay: 500,
-    showCursor: true,
-    cursorChar: '|',
-    attr: null,
-    bindInputFocusEvents: true,
-    contentType: 'html',
-    onBegin: function(self) {
-      document.querySelector('.typing-text').style.display = 'inline-block';
-    },
-    onStringTyped: function(arrayPos, self) {
-      document.querySelector('.typing-text').style.display = 'inline-block';
-    },
-    onComplete: function(self) {
-      document.querySelector('.typing-text').style.display = 'inline-block';
-    }
-});
-// Ensure typewriter is always visible on Android/mobile
+// Glowing/animated hero and subtext effect
 document.addEventListener('DOMContentLoaded', function() {
-  var typing = document.querySelector('.typing-text');
-  if(typing) typing.style.display = 'inline-block';
+  // Add glowing effect to hero heading
+  var heroHeading = document.querySelector('.home .content h2');
+  if(heroHeading) {
+    heroHeading.classList.add('glow-text');
+  }
+  // Add animated effect to subtext ("I'm into ...")
+  var heroSub = document.querySelector('.home .content h3');
+  if(heroSub) {
+    heroSub.classList.add('glow-subtext');
+  }
 });
-// <!-- typed js effect ends -->
 
 async function fetchData(type = "skills") {
     let response

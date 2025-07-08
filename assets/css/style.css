@@ -298,11 +298,17 @@ header .navbar ul li a:hover {
   text-align: center;
   word-break: break-word;
 }
-.home .content h2 span {
+/* Typewriter span for hero heading */
+.home .content h2 span, .home .content h2 .typewriter {
   font-size: 4rem;
   font-weight: 800;
-  color: #b0b0b0;
-  display: inline-block;
+  color: #ffd900 !important; /* Gold for visibility */
+  display: inline-block !important;
+  background: none !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  z-index: 10 !important;
+  position: relative !important;
 }
 @media (max-width: 700px) {
   .home .content h2 {
@@ -317,10 +323,10 @@ header .navbar ul li a:hover {
     z-index: 10 !important;
     position: relative !important;
   }
-  .home .content h2 span {
+  .home .content h2 span, .home .content h2 .typewriter {
     font-size: 2.2rem !important;
     display: inline-block !important;
-    color: #b0b0b0 !important;
+    color: #ffd900 !important;
     visibility: visible !important;
     opacity: 1 !important;
     z-index: 10 !important;
@@ -328,7 +334,7 @@ header .navbar ul li a:hover {
   }
 }
 @media (max-width: 450px) {
-  .home .content h2, .home .content h2 span {
+  .home .content h2 {
     font-size: 1.5rem !important;
     word-break: break-word !important;
     color: #fff !important;
@@ -337,6 +343,15 @@ header .navbar ul li a:hover {
     z-index: 10 !important;
     position: relative !important;
     display: block !important;
+  }
+  .home .content h2 span, .home .content h2 .typewriter {
+    font-size: 1.5rem !important;
+    display: inline-block !important;
+    color: #ffd900 !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 10 !important;
+    position: relative !important;
   }
 }
 
@@ -1461,9 +1476,29 @@ form .button-area {
   html {
     font-size: 52%;
   }
-  .home .content h2, .home .content h2 span {
-    font-size: 1.5rem;
-    word-break: break-word;
+  .home .content h2 {
+    font-size: 1.5rem !important;
+    word-break: break-word !important;
+    color: #fff !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 10 !important;
+    position: relative !important;
+    display: block !important;
+    text-align: center !important;
+  }
+  .home .content h2 span, .home .content h2 .typewriter {
+    font-size: 1.5rem !important;
+    color: #ffd900 !important;
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 10 !important;
+    position: relative !important;
+    animation: motion-text 2.5s infinite;
+    background: none !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.05em !important;
   }
   .home .content p, .home .content p span {
     font-size: 1.1rem;

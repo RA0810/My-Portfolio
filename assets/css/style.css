@@ -1,3 +1,73 @@
+/* Glowing and animated hero heading */
+.glow-text {
+  color: #fff !important;
+  text-shadow:
+    0 0 8px #fff,
+    0 0 16px #ffd900,
+    0 0 32px #ffd900,
+    0 0 64px #fff,
+    0 2px 16px rgba(0,0,0,0.18),
+    0 1px 0 #000;
+  animation: heroGlow 2.2s ease-in-out infinite alternate, heroTextFadeUp 1.1s cubic-bezier(0.77,0,0.175,1) 0.2s both;
+}
+
+@keyframes heroGlow {
+  0% {
+    text-shadow:
+      0 0 8px #fff,
+      0 0 16px #ffd900,
+      0 0 32px #ffd900,
+      0 0 64px #fff,
+      0 2px 16px rgba(0,0,0,0.18),
+      0 1px 0 #000;
+  }
+  100% {
+    text-shadow:
+      0 0 24px #fff,
+      0 0 48px #ffd900,
+      0 0 96px #ffd900,
+      0 0 128px #fff,
+      0 2px 16px rgba(0,0,0,0.18),
+      0 1px 0 #000;
+  }
+}
+
+.glow-subtext {
+  color: #ffd900 !important;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-shadow:
+    0 0 8px #ffd900,
+    0 0 16px #fff,
+    0 2px 16px rgba(0,0,0,0.18);
+  animation: fadeUpSubtext 1.2s cubic-bezier(0.77,0,0.175,1) 0.4s both, subtextGlow 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes fadeUpSubtext {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes subtextGlow {
+  0% {
+    text-shadow:
+      0 0 8px #ffd900,
+      0 0 16px #fff,
+      0 2px 16px rgba(0,0,0,0.18);
+  }
+  100% {
+    text-shadow:
+      0 0 24px #ffd900,
+      0 0 48px #fff,
+      0 2px 16px rgba(0,0,0,0.18);
+  }
+}
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap");
 

@@ -171,7 +171,7 @@ VanillaTilt.init(document.querySelectorAll(".tilt"), {
 // window.onload = fadeOut;
 // pre loader end
 
-// disable developer mode
+srtop.reveal('.home .telegram', { interval: 600 }); // REMOVE or comment out if Telegram is not used
 document.onkeydown = function (e) {
     if (e.keyCode == 123) {
         return false;

@@ -84,10 +84,18 @@ function showProjects(projects) {
 
     // isotope filter products
     var $grid = $('.box-container').isotope({
-        itemSelector: '.grid-item',
+        itemSelector: '.box',
         layoutMode: 'fitRows',
         masonry: {
             columnWidth: 200
+        },
+        hiddenStyle: {
+            opacity: 0,
+            transform: 'scale(0.95)'
+        },
+        visibleStyle: {
+            opacity: 1,
+            transform: 'scale(1)'
         }
     });
 
@@ -97,7 +105,31 @@ function showProjects(projects) {
         $(this).addClass('is-checked');
         var filterValue = $(this).attr('data-filter');
         $grid.isotope({ filter: filterValue });
+
+        // Show/hide 'no projects' message
+        setTimeout(function() {
+            var visibleItems = $grid.find('.box:visible').length;
+            if (visibleItems === 0) {
+                if ($('#no-projects').length === 0) {
+                    $('.box-container').append('<div id="no-projects" style="width:100%;text-align:center;color:#b0b0b0;font-size:2rem;padding:4rem 0;">No projects added in this category.</div>');
+                }
+            } else {
+                $('#no-projects').remove();
+            }
+        }, 200);
     });
+
+    // Initial check for 'no projects' message
+    setTimeout(function() {
+        var visibleItems = $grid.find('.box:visible').length;
+        if (visibleItems === 0) {
+            if ($('#no-projects').length === 0) {
+                $('.box-container').append('<div id="no-projects" style="width:100%;text-align:center;color:#b0b0b0;font-size:2rem;padding:4rem 0;">No projects added in this category.</div>');
+            }
+        } else {
+            $('#no-projects').remove();
+        }
+    }, 500);
 }
 
 getProjects().then(data => {

@@ -41,31 +41,73 @@
     <button class="btn" data-filter=".mern">MERN Stack</button>
     <button class="btn" data-filter=".lamp">LAMP Stack</button>
     <button class="btn" data-filter=".basicweb">Basic Web</button>
+    <button class="btn" data-filter=".python">Python Project</button>
     <button class="btn" data-filter=".android">Android App</button>
   </div>
 
+
   <div class="box-container">
 
-    <!-- <div class="box tilt">
-      <img src="/assets/images/projects/agecalc.PNG" alt="" />
+    <!-- YouTube Transcript Summarizer (Basic Web) -->
+    <div class="box tilt basicweb">
+      <img src="/assets/images/projects/youtube-transcript.png" alt="YouTube Transcript Summarizer" />
       <div class="content">
         <div class="tag">
-        <h3>Portfolio Website</h3>
+          <h3>YouTube Transcript Summarizer</h3>
         </div>
         <div class="desc">
-          <p>Personal portfolio website. Don't need much info about it, just scroll down. You're here only!</p>
-          <div class="btns">
-            <a href="#" class="btn" target="_blank"><i class="fas fa-eye"></i> View</a>
-            <a href="#" class="btn" target="_blank">Code <i class="fas fa-code"></i></a>
-          </div>
+          <p><strong>Sep 2022 – Dec 2022</strong></p>
+          <ul>
+            <li>Developed a Python-based command-line application to retrieve and summarize YouTube transcripts using official APIs.</li>
+            <li>Custom summarization logic designed to transform long-form spoken content into digestible highlights.</li>
+            <li>Demonstrated capabilities in asynchronous data handling, API consumption, and natural language processing.</li>
+          </ul>
         </div>
       </div>
-    </div> -->   
+    </div>
+
+    <!-- Smart Voice Assistant (Python Project) -->
+    <div class="box tilt python">
+      <img src="/assets/images/projects/voice-assistant.png" alt="Smart Voice Assistant" />
+      <div class="content">
+        <div class="tag">
+          <h3>Smart Voice Assistant</h3>
+        </div>
+        <div class="desc">
+          <p><strong>Apr 2023 – Sep 2023</strong></p>
+          <ul>
+            <li>Designed and implemented a voice-activated assistant using Python, Google Speech Recognition, and pyttsx3.</li>
+            <li>Integrated mathematical computation, web queries in real time, and GUI components using Tkinter.</li>
+            <li>Delivered an intuitive user interface and robust response accuracy through speech processing modules.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Task Vault (MERN Stack) -->
+    <div class="box tilt mern">
+      <img src="/assets/images/projects/task-vault.png" alt="Task Vault" />
+      <div class="content">
+        <div class="tag">
+          <h3>Task Vault</h3>
+        </div>
+        <div class="desc">
+          <p><strong>Jan 2024 – May 2024</strong></p>
+          <ul>
+            <li>Full-featured task management web app built with the MERN stack (MongoDB, Express, React, Node.js).</li>
+            <li>Users can create, update, delete, and organize tasks with deadlines, priorities, and categories.</li>
+            <li>Authentication and authorization with JWT, secure RESTful API, and responsive React UI.</li>
+            <li>Real-time updates and notifications for collaborative task tracking.</li>
+            <li>Modern, intuitive dashboard for productivity and team management.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
   </div>
 
   <div class="backbtn">
-    <a href="/#work" class="btn">
+    <a href="../index.html#work" class="btn">
         <i class="fas fa-arrow-left"></i>
         <span>Back to Home</span>
   </a>
@@ -92,9 +134,42 @@
 <!-- isotope filter plugin cdn -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha512-Zq2BOxyhvnRFXu0+WE6ojpZLOU2jdnqbrM1hmVdGzyeCa1DgM3X5Q4A/Is9xA1IkbUeDd7755dNNI/PzSf2Pew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+
 <!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
 
 <script src="./script.js"></script>
+<script>
+  // Initialize Isotope for static HTML filtering
+  document.addEventListener('DOMContentLoaded', function () {
+    var iso = new Isotope('.box-container', {
+      itemSelector: '.box',
+      layoutMode: 'fitRows'
+    });
+    var filtersElem = document.querySelector('#filters');
+    filtersElem.addEventListener('click', function(event) {
+      if (!event.target.matches('button')) return;
+      var filterValue = event.target.getAttribute('data-filter');
+      iso.arrange({ filter: filterValue });
+      filtersElem.querySelectorAll('button').forEach(btn => btn.classList.remove('is-checked'));
+      event.target.classList.add('is-checked');
+      // Show message if no projects
+      var visible = iso.filteredItems.length;
+      let msg = document.getElementById('no-projects-msg');
+      if (!msg) {
+        msg = document.createElement('div');
+        msg.id = 'no-projects-msg';
+        msg.style = 'text-align:center;color:#fff;font-size:2rem;margin:2rem;display:none;';
+        document.querySelector('.box-container').appendChild(msg);
+      }
+      if (visible === 0) {
+        msg.textContent = 'No projects added in this category.';
+        msg.style.display = 'block';
+      } else {
+        msg.style.display = 'none';
+      }
+    });
+  });
+</script>
 
 </body>
 </html>

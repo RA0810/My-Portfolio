@@ -370,17 +370,17 @@ header .navbar ul li a:hover {
   100% { letter-spacing: 0.5em; opacity: 0.2; }
 }
 .home .content p {
-  font-size: 2.5rem;
+  font-size: 3.2rem;
   color: #fff;
   font-weight: 600;
   padding: 1rem 0;
 }
 .home .content p span,
-.home .content p .typing-text {
-  font-size: 2.5rem;
-  color: #00ff55 !important;
-  font-weight: 600;
-  padding: 1rem 0;
+  .home .content p .typing-text {
+    font-size: 3.2rem;
+    color: #ffd900 !important;
+    font-weight: 700;
+    padding: 1rem 0;
 }
 .home .btn {
   margin: 2rem auto 0 auto;

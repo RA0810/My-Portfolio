@@ -1,0 +1,10 @@
+/* Force hamburger (fa-bars) icon to white */
+#menu.fas.fa-bars {
+  color: #fff !important;
+}
+
+@media (max-width: 768px) {
+  #menu.fas.fa-bars {
+    color: #fff !important;
+  }
+}

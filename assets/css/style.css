@@ -1454,8 +1454,8 @@ form .button-area {
     align-items: center !important;
   }
   .home .image img {
-    width: 180px !important;
-    max-width: 85vw !important;
+    width: 220px !important;
+    max-width: 95vw !important;
     margin: 0 auto !important;
     display: block !important;
     border-radius: 50% !important;

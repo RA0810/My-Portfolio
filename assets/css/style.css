@@ -134,6 +134,19 @@ header .logo {
   text-decoration: none;
   color: #fff;
 }
+header .logo img {
+  height: 40px;
+  max-width: 120px;
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
+}
+@media (max-width: 600px) {
+  header .logo img {
+    height: 32px;
+    max-width: 80px;
+  }
+}
 header .logo i {
   font-size: 2.2rem;
 }

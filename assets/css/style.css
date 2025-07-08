@@ -270,6 +270,11 @@ header .navbar ul li a:hover {
 .home .image {
   flex: 1 1 40rem;
   z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4.5rem;
+  margin-bottom: 2.5rem;
 }
 .home .image img {
   width: 220px;
@@ -1440,6 +1445,10 @@ form .button-area {
   .home .image, .about .row .image {
     margin: 0 auto 2rem auto !important;
     text-align: center;
+  }
+  .home .image {
+    margin-top: 7rem !important;
+    margin-bottom: 2.5rem !important;
   }
   .home .image img, .about .row .image img {
     width: 120px;

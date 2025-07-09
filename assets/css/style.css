@@ -567,11 +567,18 @@ header .navbar ul li a:hover {
   }
 }
 .home .content p span,
-  .home .content p .typing-text {
+.home .content p .typing-text,
+.typing-intro {
     font-size: 3.2rem;
-    color: #ffd900 !important;
+    color: #00d9ff !important; /* Light blue */
     font-weight: 700;
     padding: 1rem 0;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+    text-shadow: none !important;
+    background: none !important;
+    -webkit-background-clip: initial !important;
+    -webkit-text-fill-color: initial !important;
+    animation: none !important;
 }
 .home .btn {
   margin: 2rem auto 0 auto;

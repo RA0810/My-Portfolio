@@ -69,17 +69,32 @@ document.addEventListener('visibilitychange',
     });
 
 
-// Glowing/animated hero and subtext effect
+
+// Animated intro typing effect under hero heading
 document.addEventListener('DOMContentLoaded', function() {
-  // Add glowing effect to hero heading
-  var heroHeading = document.querySelector('.home .content h2');
-  if(heroHeading) {
-    heroHeading.classList.add('glow-text');
-  }
-  // Add animated effect to subtext ("I'm into ...")
-  var heroSub = document.querySelector('.home .content h3');
-  if(heroSub) {
-    heroSub.classList.add('glow-subtext');
+  var intro = document.querySelector('.typing-intro');
+  if(intro) {
+    new Typed('.typing-intro', {
+      strings: [
+        "<span style=\"color:#fff;font-family:'Comic Sans MS', 'Comic Sans', cursive;\">I'm into</span> <span style=\"color:#b0b3b8;font-family:'Comic Sans MS', 'Comic Sans', cursive;\">Software Development</span>",
+        "<span style=\"color:#fff;font-family:'Comic Sans MS', 'Comic Sans', cursive;\">I'm into</span> <span style=\"color:#b0b3b8;font-family:'Comic Sans MS', 'Comic Sans', cursive;\">Web Designing</span>",
+        "<span style=\"color:#fff;font-family:'Comic Sans MS', 'Comic Sans', cursive;\">I'm into</span> <span style=\"color:#b0b3b8;font-family:'Comic Sans MS', 'Comic Sans', cursive;\">Full Stack Development</span>",
+        "<span style=\"color:#fff;font-family:'Comic Sans MS', 'Comic Sans', cursive;\">I'm into</span> <span style=\"color:#b0b3b8;font-family:'Comic Sans MS', 'Comic Sans', cursive;\">Freelancing</span>",
+        "<span style=\"color:#fff;font-family:'Comic Sans MS', 'Comic Sans', cursive;\">I'm into</span> <span style=\"color:#b0b3b8;font-family:'Comic Sans MS', 'Comic Sans', cursive;\">Open Source Collaboration</span>",
+        "<span style=\"color:#fff;font-family:'Comic Sans MS', 'Comic Sans', cursive;\">I'm into</span> <span style=\"color:#b0b3b8;font-family:'Comic Sans MS', 'Comic Sans', cursive;\">UI/UX Design</span>",
+        "<span style=\"color:#fff;font-family:'Comic Sans MS', 'Comic Sans', cursive;\">I'm into</span> <span style=\"color:#b0b3b8;font-family:'Comic Sans MS', 'Comic Sans', cursive;\">Learning New Tech</span>",
+        "<span style=\"color:#fff;font-family:'Comic Sans MS', 'Comic Sans', cursive;\">I'm into</span> <span style=\"color:#b0b3b8;font-family:'Comic Sans MS', 'Comic Sans', cursive;\">Building Cool Projects</span>",
+        "<span style=\"color:#fff;font-family:'Comic Sans MS', 'Comic Sans', cursive;\">I'm into</span> <span style=\"color:#b0b3b8;font-family:'Comic Sans MS', 'Comic Sans', cursive;\">Cloud Computing</span>"
+      ],
+      typeSpeed: 40,
+      backSpeed: 35,
+      backDelay: 100,
+      startDelay: 400,
+      loop: true,
+      showCursor: false,
+      smartBackspace: false,
+      contentType: 'html'
+    });
   }
 });
 

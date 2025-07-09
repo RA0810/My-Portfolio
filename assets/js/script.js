@@ -76,24 +76,21 @@ document.addEventListener('DOMContentLoaded', function() {
   if(intro) {
     new Typed('.typing-intro', {
       strings: [
-        "<span style=\"color:#fff;font-family:'Comic Sans MS', 'Comic Sans', cursive;\">I'm into</span> <span style=\"color:#b0b3b8;font-family:'Comic Sans MS', 'Comic Sans', cursive;\">Software Development</span>",
-        "<span style=\"color:#fff;font-family:'Comic Sans MS', 'Comic Sans', cursive;\">I'm into</span> <span style=\"color:#b0b3b8;font-family:'Comic Sans MS', 'Comic Sans', cursive;\">Web Designing</span>",
-        "<span style=\"color:#fff;font-family:'Comic Sans MS', 'Comic Sans', cursive;\">I'm into</span> <span style=\"color:#b0b3b8;font-family:'Comic Sans MS', 'Comic Sans', cursive;\">Full Stack Development</span>",
-        "<span style=\"color:#fff;font-family:'Comic Sans MS', 'Comic Sans', cursive;\">I'm into</span> <span style=\"color:#b0b3b8;font-family:'Comic Sans MS', 'Comic Sans', cursive;\">Freelancing</span>",
-        "<span style=\"color:#fff;font-family:'Comic Sans MS', 'Comic Sans', cursive;\">I'm into</span> <span style=\"color:#b0b3b8;font-family:'Comic Sans MS', 'Comic Sans', cursive;\">Open Source Collaboration</span>",
-        "<span style=\"color:#fff;font-family:'Comic Sans MS', 'Comic Sans', cursive;\">I'm into</span> <span style=\"color:#b0b3b8;font-family:'Comic Sans MS', 'Comic Sans', cursive;\">UI/UX Design</span>",
-        "<span style=\"color:#fff;font-family:'Comic Sans MS', 'Comic Sans', cursive;\">I'm into</span> <span style=\"color:#b0b3b8;font-family:'Comic Sans MS', 'Comic Sans', cursive;\">Learning New Tech</span>",
-        "<span style=\"color:#fff;font-family:'Comic Sans MS', 'Comic Sans', cursive;\">I'm into</span> <span style=\"color:#b0b3b8;font-family:'Comic Sans MS', 'Comic Sans', cursive;\">Building Cool Projects</span>",
-        "<span style=\"color:#fff;font-family:'Comic Sans MS', 'Comic Sans', cursive;\">I'm into</span> <span style=\"color:#b0b3b8;font-family:'Comic Sans MS', 'Comic Sans', cursive;\">Cloud Computing</span>"
+        "I'm into Software Development",
+        "Web Designing",
+        "Full Stack Development",
+        "Freelancing",
+        "Open Source Collaboration",
+        "UI/UX Design",
+        "Learning New Tech",
+        "Building Cool Projects"
       ],
-      typeSpeed: 40,
-      backSpeed: 35,
-      backDelay: 100,
-      startDelay: 400,
+      typeSpeed: 60,
+      backSpeed: 30,
+      backDelay: 1200,
+      startDelay: 300,
       loop: true,
-      showCursor: false,
-      smartBackspace: false,
-      contentType: 'html'
+      showCursor: false
     });
   }
 });

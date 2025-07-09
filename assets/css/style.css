@@ -3,6 +3,7 @@
   color: #fff !important;
   background: none !important;
   -webkit-background-clip: initial !important;
+  background-clip: initial !important;
   -webkit-text-fill-color: initial !important;
   text-shadow:
     0 0 8px #fff,
@@ -64,6 +65,7 @@
   background-size: 200% 100%;
   background-position: 100% 0;
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: revealSubtextBg 2.2s cubic-bezier(0.77,0,0.175,1) 0.7s both;
   position: relative;
@@ -567,18 +569,11 @@ header .navbar ul li a:hover {
   }
 }
 .home .content p span,
-.home .content p .typing-text,
-.typing-intro {
+  .home .content p .typing-text {
     font-size: 3.2rem;
-    color: #00d9ff !important; /* Light blue */
+    color: #ffd900 !important;
     font-weight: 700;
     padding: 1rem 0;
-    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
-    text-shadow: none !important;
-    background: none !important;
-    -webkit-background-clip: initial !important;
-    -webkit-text-fill-color: initial !important;
-    animation: none !important;
 }
 .home .btn {
   margin: 2rem auto 0 auto;
@@ -1077,7 +1072,6 @@ color: #fff;
 .work .box-container .box:hover {
   transform: scale(1.03);
   box-shadow: 0 2rem 4rem rgba(255,217,0,0.18), 0 2rem 4rem rgba(0,0,0,0.45);
-}
 }
 .work .box-container .box img {
   width: 100%;
